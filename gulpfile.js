@@ -24,7 +24,7 @@ function browsersync() {
 	})
 }
 
-
+// SCSS
 function styles() {
 	return src('app/scss/style.scss')
 		// Compressed SCSS
@@ -41,7 +41,7 @@ function styles() {
 		// browserSync
 		.pipe(browserSync.stream())
 }
-
+// JS
 function scripts() {
 	return src([
 		// jQuery
@@ -58,7 +58,7 @@ function scripts() {
 	// browserSync
 	.pipe(browserSync.stream())	
 }
-
+// images
 // Сжатия картинок
 function images(){
 	return src('app/img/**/*.*')
