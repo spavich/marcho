@@ -71,6 +71,105 @@
 
 
 
+.footer{
+	background-color: $bg;
+}
+.footer-top{
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid #ececec;
+	padding: 70px 0 40px;
+	&__contact{
+		width: 250px;
+		margin-right: 50px;
+	}
+	&__nav{
+		width: 170px;
+		margin-right: 30px;
+	}
+	&__item-form{
+		width: 470px;
+	}
+	&__logo{
+		display: block;
+		margin-bottom: 33px;
+	}
+	&__adress,
+	&__email,
+	&__phone,
+	&__list-link{
+		display: block;
+		margin-bottom: 14px;
+	}
+	&__socials{
+		display: flex;
+		align-items: center;
+		margin-top: 30px;
+	}
+	&__social + .footer-top__social{
+		margin-left: 18px;
+	}
+	&__social-link{
+		path{
+			fill: $default;
+			transition: all .3s;
+		}
+		&:hover{
+			path{
+				fill: $accent;
+			}
+		}
+	}
+	&__title{
+		@extend %roboto-500;
+		font-size: 22px;
+		line-height: 1;
+		color: $title;
+		margin-bottom: 40px;
+	}
+	&__text{
+		margin-bottom: 25px;
+	}
+	&__input{
+		max-width: 320px;
+		width: 100%;
+		background-color: #fff;
+		border: none;
+		padding: 12px 10px 12px 15px;
+		box-shadow: 0px 7px 20px 0px rgba(192,  192, 192, 0.3);
+		&::placeholder{
+			color: $default;
+			font-size: 16px;
+		}
+	}
+	&__form-btn{
+		text-transform: uppercase;
+		color: #fff;
+		background-color: $accent;
+		border: none;
+		cursor: pointer;
+		padding: 12px 26px;
+		box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
+	}
+}
+.footer-bottom{
+	height: 75px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 12px;
+	&__accept{
+		display: flex;
+		align-items: center;
+	}
+	&__accepr-img{
+		cursor: pointer;
+		margin-left: 25px;
+	}
+}
+
+
+
 
 // Медиа-запросы
 @import 'media';
