@@ -15,6 +15,7 @@ const del = require('del');
 // Плагин, который позволяет обновлять страницу
 const browserSync = require('browser-sync').create();
 
+
 function browsersync() {
 	browserSync.init({
 		server: {
@@ -46,6 +47,8 @@ function scripts() {
 	return src([
 		// jQuery
 		'node_modules/jquery/dist/jquery.js',
+		// Slick
+		'node_modules/slick-carousel/slick/slick.js',
 		// JS
 		'app/js/main.js'
 	])
