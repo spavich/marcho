@@ -7,6 +7,8 @@
 // Главные стили
 @import 'global';
 
+
+// Header
 .header{
 	padding: 40px 0;
 	&__wrapper{
@@ -23,19 +25,19 @@
 		padding-left: 35px;
 	}
 	&__link{
-		@extend %quicksand-400;
+		@extend %roboto-500;
 		color: $title;
 		text-transform: uppercase;
-		padding-bottom: 1px;
+		padding: 0 2px 1px;
 		transition: all .3s;
 		&:hover{
-			@extend %quicksand-500;
+			@extend %roboto-700;
 			color: $accent;
 			border-bottom: 1px solid $accent;
 		}
 	}
 	&__link--active{
-		@extend %quicksand-500;
+		@extend %roboto-700;
 		color: $accent;
 		border-bottom: 1px solid $accent;
 	}
@@ -70,7 +72,7 @@
 
 
 
-
+// Footer
 .footer{
 	background-color: $bg;
 }
