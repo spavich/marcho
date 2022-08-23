@@ -32,7 +32,7 @@
 	font-display: swap;
 	src: local('Roboto-Medium'),	
 				url('../fonts/Roboto-Medium.woff2') format('woff2'),
-				url('../fonts/Roboto-Medium.woff') format('Roboto');
+				url('../fonts/Roboto-Medium.woff') format('woff');
 }
 @font-face {
 	font-family: 'Roboto-Bold';
@@ -41,5 +41,5 @@
 	font-display: swap;
 	src: local('Roboto-Bold'),	
 				url('../fonts/Roboto-Bold.woff2') format('woff2'),
-				url('../fonts/Roboto-Bold.woff') format('Roboto');
+				url('../fonts/Roboto-Bold.woff') format('woff');
 }
