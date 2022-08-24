@@ -49,6 +49,8 @@ function scripts() {
 		'node_modules/jquery/dist/jquery.js',
 		// Slick
 		'node_modules/slick-carousel/slick/slick.js',
+		// Fancyapps/fancybox
+		'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
 		// JS
 		'app/js/main.js'
 	])

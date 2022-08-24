@@ -37,3 +37,11 @@ $blue: #34c3ff;
 	padding: 12px 26px;
 	box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
 }
+
+// Snippet fancybox error
+@function max($numbers...){
+	@return m#{a}x(#{$numbers});
+}
+@function min($numbers...){
+	@return m#{i}n(#{$numbers});
+}

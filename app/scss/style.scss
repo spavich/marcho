@@ -390,5 +390,58 @@
 	}
 }
 
+// Video-fashion
+.video-fashion {
+	background-color: $bg;
+	background-image: url('../img/decor/pattern.svg');
+	background-size: cover;
+	background-position: top center;
+	background-repeat: no-repeat;
+	padding: 125px 0;
+
+	&__inner {
+		display: flex;
+	}
+
+	&__popup {
+		margin-right: 60px;
+		max-width: 530px;
+		width: 100%;
+		height: 480px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+	}
+
+	&__content {
+		max-width: 570px;
+	}
+
+	&__subtitle {
+		font-size: 22px;
+		text-transform: uppercase;
+		color: $accent;
+		padding-top: 75px;
+		margin-bottom: 24px;
+	}
+
+	&__title {
+		text-align: left;
+		margin-bottom: 40px;
+	}
+
+	&__text {
+		margin-bottom: 59px;
+	}
+
+	&__link {
+		@extend %btn;
+	}
+}
+
+
 // Медиа-запросы
 @import 'media';
