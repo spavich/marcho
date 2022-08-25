@@ -11,4 +11,12 @@ $(function(){
 		autoplaySpeed: 3000,
 	});
 
+	// RateYo plugin for rating
+	$(".star").rateYo({
+    rating: 3.6,
+		starWidth: "18px",
+		normalFill: "#ccccce",
+		ratedFill: "#ffc35b",
+		readOnly: true
+  });
 });

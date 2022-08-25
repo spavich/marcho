@@ -51,6 +51,8 @@ function scripts() {
 		'node_modules/slick-carousel/slick/slick.js',
 		// Fancyapps/fancybox
 		'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
+		// Rateyo - rating
+		'node_modules/rateyo/src/jquery.rateyo.js',
 		// JS
 		'app/js/main.js'
 	])

@@ -3,6 +3,7 @@ $accent: #fe3e57;
 $default: #8d8d8d;
 $title: #29282d;
 $bg: #f6f6f6;
+$white: #ffffff;
 $orange: #ffb534;
 $blue: #34c3ff;
 
@@ -33,7 +34,8 @@ $blue: #34c3ff;
 	@extend %roboto-400;
 	background-color: $accent;
 	text-transform: uppercase;
-	color: #fff;
+	color: $white;
+	letter-spacing: 0.2em;
 	padding: 12px 26px;
 	box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
 }

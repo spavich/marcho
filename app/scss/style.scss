@@ -127,6 +127,9 @@
 	&__text{
 		margin-bottom: 25px;
 	}
+	&__form{
+		display: flex;
+	}
 	&__input{
 		max-width: 320px;
 		width: 100%;
@@ -143,7 +146,7 @@
 		@extend %btn;
 		border: none;
 		cursor: pointer;
-	}
+	} 
 }
 .footer-bottom{
 	height: 75px;
@@ -440,6 +443,131 @@
 	&__link {
 		@extend %btn;
 	}
+}
+
+// Product
+.product {
+	padding: 120px 0;
+	text-align: center;
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 50px 30px;
+	}
+
+	&__link {
+		text-transform: uppercase;
+		color: $title;
+		display: inline-block;
+		border: 1px solid $accent;
+		padding: 19px 29px;
+		margin-top: 60px;
+	}
+}
+
+.product-item {
+	max-width: 370px;
+	text-align: center;
+
+	&:hover{
+		.product-item__link-box{
+			transform: translateY(0);
+		}
+	}
+
+	&--sale{
+		.product-item__img-box::before{
+			content: "SALE";
+			@extend %btn;
+			line-height: 1;
+			letter-spacing: 0.05em;
+			padding: 9px 10px;
+			position: absolute;
+			top: 25px;
+			left: 25px;
+		}
+	}
+
+	&__img-box {
+		position: relative;
+		height: 370px;
+		overflow: hidden;
+		margin-bottom: 25px;
+	}
+
+	&__img {
+		object-fit: cover;
+	}
+
+	&__link-box {
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 50px;
+		width: 220px;
+		height: 50px;
+    margin: 0 auto;
+		background-color: #ffffff;
+		box-shadow: 0px 5px 30px 0px rgba(152,152,152,0.2);
+		border-radius: 25px;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		transform: translateY(300%);
+		transition: all .7s;
+	}
+
+	&__link {
+		display: inherit;
+		transition: all .3s;
+		path{
+			transition: all .3s;
+		}
+	}
+	&__link:hover{
+		path{
+			fill: $accent;
+		}
+	}
+	&__link--line::before,
+	&__link--line::after {
+		content: '';
+		position: absolute;
+		background-color: #ececec;
+		width: 1px;
+		height: 30px;
+		top: 10px;
+	}
+	&__link--line::before{
+		left: 70px;
+	}
+	&__link--line::after {
+		right: 70px;
+	}
+
+	&__title {
+		color: $title;
+		padding: 19px 0 20px 0;
+	}
+
+	&__price {
+		display: flex;
+		justify-content: center;
+		@extend %roboto-400;
+	}
+
+	&__price-new {
+		padding: 0 12px;
+		color: $title;
+	}
+
+	&__price-old {
+		padding: 0 12px;
+		text-decoration: line-through;
+	}
+}
+.star {
+	margin: 0 auto;
 }
 
 
