@@ -814,6 +814,43 @@
 	}
 }
 
+// 404 page
+.page-404 {
+	padding: 120px 0;
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__content {
+		max-width: 570px;
+		width: 100%;
+	}
+
+	&__title {
+		text-transform: capitalize;
+		text-align: left;
+		color: #28384f;
+	}
+
+	&__text {
+		max-width: 470px;
+		margin-bottom: 60px;
+	}
+
+	&__link {
+		@extend %btn;
+		letter-spacing: 0;
+		padding: 19px 34px;
+		box-shadow: 0px 5px 25px 0px rgba(254,62,87,0.34);
+	}
+
+	&__img {
+	}
+}
+
+
 
 
 // Медиа-запросы
