@@ -1,0 +1,14 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 8" width="10" height="8">
+	<title>Blog_section</title>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #8d8d8d } 
+	</style>
+	<g id="Blog_section">
+		<g id="Blog_2">
+			<g id="Read more btn">
+				<path id="arrow" class="shp0" d="M9.84 3.62C9.94 3.72 10 3.86 10 4C10 4.14 9.94 4.27 9.84 4.37L6.23 7.84C6.12 7.94 5.99 8 5.84 8C5.69 8 5.56 7.94 5.45 7.85L5.13 7.53C5.02 7.43 4.97 7.3 4.97 7.16C4.97 7.02 5.02 6.89 5.13 6.79L7.26 4.75L0.54 4.75C0.24 4.75 0 4.5 0 4.21L0 3.76C0 3.47 0.24 3.25 0.54 3.25L7.23 3.25L5.13 1.22C5.02 1.12 4.97 0.98 4.97 0.84C4.97 0.7 5.02 0.57 5.13 0.47L5.45 0.15C5.56 0.05 5.69 0 5.84 0C5.99 0 6.12 0.05 6.23 0.15L9.84 3.62" />
+			</g>
+		</g>
+	</g>
+</svg>
