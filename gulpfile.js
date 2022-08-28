@@ -53,6 +53,10 @@ function scripts() {
 		'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
 		// Rateyo - rating
 		'node_modules/rateyo/src/jquery.rateyo.js',
+		// IonRangeSlider (Filter for shop)
+		'node_modules/ion-rangeslider/js/ion.rangeSlider.js',
+		// JQuery-form-styler (stylization selects)
+		'node_modules/jquery-form-styler/dist/jquery.formstyler.js',
 		// JS
 		'app/js/main.js'
 	])
