@@ -48,7 +48,53 @@ $(function(){
 	$('.button-grid').on('click', function(){
 		$('.product-item').removeClass('product-item--list');
 	});
+
+	// Slider product
+	$('.product-slide__thumb').slick({
+		asNavFor: '.product-slide__big',
+		focusOnSelect: true,
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		vertical: true,
+		draggable: false
+	});
+	$('.product-slide__big').slick({
+		asNavFor: '.product-slide__thumb',
+		draggable: false,
+		arrows: false,
+		fade: true
+	});
+
+	// 
+	$('.product-tabs__top-item').on('click', function(e){
+		e.preventDefault();
+		$('.product-tabs__top-item').removeClass('product-tabs__top-item--active');
+		$(this).addClass('product-tabs__top-item--active');
+
+		$('.product-tabs__content-item').removeClass('product-tabs__content-item--active');
+		$($(this).attr('href')).addClass('product-tabs__content-item--active');
+
+	});
 });
+
+// Counter
+const counter = document.querySelector('.counter'),
+			minys = counter.querySelector('.counter__minus'),
+			plus = counter.querySelector('.counter__plus'),
+			num = counter.querySelector('.counter__num');
+
+plus.addEventListener('click', ()=>{
+	if(num.value < 99 && num.value > 0){
+		num.value++;
+	}
+});
+minys.addEventListener('click', ()=>{
+	if(num.value > 1){
+		num.value--;
+	}
+});
+
+
 
 
 // Timer
