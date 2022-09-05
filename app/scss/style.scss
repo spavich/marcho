@@ -781,32 +781,6 @@
 		padding: 30px 40px;
 	}
 
-	&__item-info {
-		display: flex;
-		justify-content: space-between;
-		margin-bottom: 20px;
-	}
-
-	&__item-author,
-	&__item-date {
-		padding-left: 30px;
-		position: relative;
-		&::before{
-			content: "";
-			position: absolute;
-			width: 20px;
-			height: 20px;
-			left: 0;
-			top: 2px;
-		}
-	}
-	&__item-author::before{
-		background-image: url(../img/icons/user.svg);
-	}
-	&__item-date::before{
-		background-image: url(../img/icons/time.svg);
-	}
-
 	&__item-title {
 		color: $title;
 		@extend %roboto-400;
@@ -828,6 +802,233 @@
 		right: -14px;
 	}
 }
+.blog-box{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+	&__author,
+	&__date{
+		padding-left: 30px;
+		position: relative;
+		&::before{
+			content: "";
+			position: absolute;
+			width: 20px;
+			height: 20px;
+			left: 0;
+			top: 2px;
+		}
+	}
+
+	&__author::before{
+		background-image: url(../img/icons/user.svg);
+	}
+	&__date::before{
+		background-image: url(../img/icons/time.svg);
+	}
+}
+
+// Blog-page section
+.blog-page{
+	padding: 120px 0 60px;
+	position: relative;
+	&__item--slider{
+		.blog-page__item-box {
+			margin-top: -8px;
+		}
+	}
+	&__slider{
+		.slick-prev,
+		.slick-next{
+			width: 40px;
+			height: 40px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: $accent;
+			border: none;
+			border-radius: 50%;
+			box-shadow: 0px 7px 20px 0px rgba(254,62,87,0.3);
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			z-index: 5;
+			cursor: pointer;
+			path{
+				fill: $white;
+			}
+		}
+		.slick-disabled{
+			background-color: $white;
+			box-shadow: 0px 7px 20px 0px rgba(168,168,168,0.3);
+			path{
+				fill: $accent;
+			}
+		}
+		.slick-prev{
+			left: 40px;
+		}
+		.slick-next{
+			right: 40px;
+		}
+	}
+	&__inner{
+		display: flex;
+		justify-content: space-between;
+	}
+	&__content{
+		width: 770px;
+		margin-right: 30px;
+	}
+	&__aside{
+		width: 370px;
+	}
+	&__item{
+		margin-bottom: 60px;
+		transition: box-shadow .4s;
+		&:hover{
+			box-shadow: 0px 20px 60px 0px rgba(202,202,202,0.34);
+		}
+	}
+	&__item--no-img{
+		.blog-page__item-box{
+			border: 1px solid #ececec;
+		}
+	}
+	&__link{
+		display: block;
+	}
+	&__img{
+		max-width: 770px;
+		height: 450px;
+		object-fit: cover;
+		display: block;
+	}
+	&__item-box{
+		padding: 40px;
+		border: 1px solid #ececec;
+		border-top: none;
+	}
+	&__item-title{
+		margin-bottom: 20px;
+	}
+	&__item-link{
+		@extend %roboto-500;
+		font-size: 22px;
+		line-height: 32px;
+		color: $title;
+		transition: color .5s;
+		&:hover{
+			color: $accent;
+		}
+	}
+	.blog-box{
+		justify-content: start;
+		&__author{
+			margin-right: 30px;
+		}
+	}
+}
+
+.person {
+	padding: 40px 27px;
+	text-align: center;
+	border: 1px solid #ececec;
+	margin-bottom: 40px;
+
+	&__img{
+		display: inline-block;
+		width: 160px;
+		height: 160px;
+		object-fit: cover;
+		margin:  0 auto 35px auto;
+	}
+
+	&__name {
+		@extend %roboto-700;
+		font-size: 18px;
+		line-height: 26px;
+		color: $title;
+		margin-bottom: 5px;
+	}
+
+	&__position {
+		color: $accent;
+		margin-bottom: 25px;
+	}
+
+	&__text {
+		margin-bottom: 25px;
+	}
+
+	&__socials {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+.latest-post {
+	padding: 40px 30px;
+	border: 1px solid #ececec;
+	margin-bottom: 40px;
+
+	&__title {
+		@extend %roboto-400;
+		font-size: 22px;
+		line-height: 1.2;
+		margin-bottom: 35px;
+		text-align: left;
+	}
+
+	&__item {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		margin-bottom: 20px;
+		& + .latest-post__item{
+			padding-top: 20px;
+			border-top: 1px solid #ececec;
+		}
+	}
+
+	&__img-link {
+		display: block;
+		margin-right: 20px;
+		min-width: 80px;
+	}
+
+	&__img {
+		width: 80px;
+		height: 80px;
+		object-fit: cover;
+		background-color: #ececec;
+	}
+
+	&__box-title {
+		@extend %roboto-400;
+		font-size: 18px;
+		line-height: 28px;
+		color: $title;
+	}
+
+	&__date {
+		padding-left: 27px;
+		position: relative;
+		&::before{
+			content: '';
+			position: absolute;
+			top: 5px;
+			left: 0;
+			background-image: url(../img/icons/calendar.svg);
+			width: 16px;
+			height: 16px;
+		}
+	}
+}
+
+
+
 
 
 // Modal
