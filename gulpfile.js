@@ -15,6 +15,7 @@ const del = require('del');
 // Плагин, который позволяет обновлять страницу
 const browserSync = require('browser-sync').create();
 
+
 function browsersync() {
 	browserSync.init({
 		server: {
@@ -24,7 +25,7 @@ function browsersync() {
 	})
 }
 
-
+// SCSS
 function styles() {
 	return src('app/scss/style.scss')
 		// Compressed SCSS
@@ -41,11 +42,21 @@ function styles() {
 		// browserSync
 		.pipe(browserSync.stream())
 }
-
+// JS
 function scripts() {
 	return src([
 		// jQuery
 		'node_modules/jquery/dist/jquery.js',
+		// Slick
+		'node_modules/slick-carousel/slick/slick.js',
+		// Fancyapps/fancybox
+		'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
+		// Rateyo - rating
+		'node_modules/rateyo/src/jquery.rateyo.js',
+		// IonRangeSlider (Filter for shop)
+		'node_modules/ion-rangeslider/js/ion.rangeSlider.js',
+		// JQuery-form-styler (stylization selects)
+		'node_modules/jquery-form-styler/dist/jquery.formstyler.js',
 		// JS
 		'app/js/main.js'
 	])
@@ -58,7 +69,7 @@ function scripts() {
 	// browserSync
 	.pipe(browserSync.stream())	
 }
-
+// images
 // Сжатия картинок
 function images(){
 	return src('app/img/**/*.*')
